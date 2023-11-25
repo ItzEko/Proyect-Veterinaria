@@ -1,0 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mogra&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* que el html ocupe el 100% de nuestro espacio en la pantalla */
+html{
+    height: 100%;
+}
+body{
+    background-color: #F2F3F3;
+    /* para que ocupe el 100% */
+    min-height: 100%;
+    /* damos un margen a la izquierda */
+    margin-left: 3.125rem;
+}
+.grid-container >*{
+    height: 100%;
+    padding: 0.625rem;
+    text-align: left;
+}
+/* comenzamos dandole las dimensiones en el layout de GRID */
+.grid-container{
+    display: grid;
+    gap:0.625rem;  /*separacion entre los elementos del body */
+    /* ponemos las areas que queremos en el grid sus secciones,damos la estructura que queremos que se acomoden */
+    grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+    /* damos el tamaño de la primera columna y la otra la dejamos en auto 
+    estas son el sidebar y el main por que son columnas */
+    grid-template-columns: 18.75rem auto;
+    /* ahora vamos a darle tamaño a las filas, primera fila que es el header,segunda sidebar y main
+    tercera el footer */
+    grid-template-rows: 6.25rem auto 6.25rem;
+}
+
+.header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.header p{
+    margin-top: 1.875rem;
+    color: #B61E2D;
+    text-align: center;
+    font-family: 'Mogra', sans-serif;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1; /* altura de línea a 1 para reducir el espacio entre líneas */
+    border-bottom: 1px solid gray; /* línea debajo del texto */
+    margin-bottom: 5px; 
+}
+
+.main{
+    grid-area: main;
+    background-color: blue;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: brown;
+}
+.footer{
+    grid-area: footer;
+    background-color: chartreuse;
+}
