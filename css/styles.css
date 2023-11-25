@@ -29,9 +29,9 @@ body{
     gap:0.625rem;  /*separacion entre los elementos del body */
     /* ponemos las areas que queremos en el grid sus secciones,damos la estructura que queremos que se acomoden */
     grid-template-areas: 
-    "header header"
+    "sidebar header"
     "sidebar main"
-    "footer footer";
+    "footer  footer";
     /* damos el tamaño de la primera columna y la otra la dejamos en auto 
     estas son el sidebar y el main por que son columnas */
     grid-template-columns: 18.75rem auto;
@@ -46,7 +46,20 @@ body{
     justify-content: space-between;
     
 }
-.header p{
+
+.header .pages {
+    font-family: 'Inter', sans-serif;
+    display: block;
+}
+.main{
+    grid-area: main;
+    background-color: blue;
+}
+.sidebar{
+    grid-area: sidebar;
+    display: block;
+}
+.sidebar p{
     margin-top: 1.875rem;
     color: #B61E2D;
     text-align: center;
@@ -57,15 +70,6 @@ body{
     line-height: 1; /* altura de línea a 1 para reducir el espacio entre líneas */
     border-bottom: 1px solid gray; /* línea debajo del texto */
     margin-bottom: 5px; 
-}
-
-.main{
-    grid-area: main;
-    background-color: blue;
-}
-.sidebar{
-    grid-area: sidebar;
-    background-color: brown;
 }
 .footer{
     grid-area: footer;
