@@ -30,6 +30,7 @@ body{
     /* ponemos las areas que queremos en el grid sus secciones,damos la estructura que queremos que se acomoden */
     grid-template-areas: 
     "sidebar header"
+    "sidebar navbar"
     "sidebar main"
     "footer  footer";
     /* damos el tamaño de la primera columna y la otra la dejamos en auto 
@@ -37,7 +38,7 @@ body{
     grid-template-columns: 18.75rem auto;
     /* ahora vamos a darle tamaño a las filas, primera fila que es el header,segunda sidebar y main
     tercera el footer */
-    grid-template-rows: 6.25rem auto 6.25rem;
+    grid-template-rows: 6.25rem 6.25rem auto 1.25rem;
 }
 
 .header{
@@ -57,9 +58,69 @@ body{
     font-size: 2.5rem;
     margin-right: 1.875rem;
 }
+.navbar{
+    grid-area: navbar;
+}
+.navbar .users{
+    display: flex;
+    border-radius: 1.875rem;
+    background: #FFF;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+    width: 200px;
+    height: 70px;
+}
+.navbar .icon{
+    background-color: #C600F8;
+    width: 40px;
+    height:50px;
+    margin-left: 10px;
+    margin-top: 7px;
+    border-radius: 0.9375rem;
+    background: linear-gradient(143deg, #FD0499 11.29%, rgba(179, 0, 250, 0.71) 64.44%, rgba(97, 0, 255, 0.62) 103.23%);  
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    
+}
+.navbar i{
+    margin-left: 2px;
+    font-size: 2.25rem;
+}
+.navbar .cant p{
+    text-align: center;
+    margin-top: 10px;
+}
+.navbar .cant h3{
+    text-align: center;
+}
+
 .main{
     grid-area: main;
-    background-color: blue;
+    display: flex;
+    flex-direction: row; /* Asegúrate de que la orientación sea "row" */
+    margin-left: 30px;
+}
+.main .perfil{
+    width: 21.6875rem;
+    height: 23.9375rem;
+    margin-left: 60px;
+    border-radius: 2.5rem;
+    background: #FFF;
+    box-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.main .perfil .logo{
+    width: 14.375rem;
+    height: 14.375rem;
+    flex-shrink: 0;
+    fill: #F2F3F3;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 180px;
+    
+}
+.main .perfil .logo img{
+    width: 11.875rem;
+    height: 11.875rem;
+    border-radius: 11.875rem;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 .sidebar{
     grid-area: sidebar;
@@ -80,6 +141,13 @@ body{
 .sidebar .userside {
     display: flex;
     margin-top: 2.5rem;
+    border-radius: 0.625rem;
+    background: #FAFBFF;
+    box-shadow: 0px 2px 2px 0px rgba(207, 207, 209, 0.45);
+    width: 13.4375rem;
+    height: 3.0625rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .sidebar .userside .cube .bi-person {
@@ -87,7 +155,8 @@ body{
     margin-left:0.313rem;
 }
 .sidebar .userside .cube {
-    background-color:#C600F8;
+    background: #C600F8;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius:0.625rem;
     height:1.875rem;
     width:1.875rem;
@@ -95,14 +164,15 @@ body{
 
 .sidebar .userside p {
     font-size:17px; /* Tamaño de fuente más pequeño para el texto */
-    margin-left: 40px;
+    margin-left: 30px;
+    margin-top: 13px;
     font-family: 'Inter', sans-serif;
 }
 .sidebar .registros button {
     border: none;
     font-size: 1.25rem;
 }
+
 .footer{
     grid-area: footer;
-    background-color: chartreuse;
 }
