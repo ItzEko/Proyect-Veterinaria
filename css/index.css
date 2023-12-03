@@ -106,6 +106,7 @@ html {
   align-items: flex-start; /* Alinea los elementos secundarios al inicio del eje transversal */
   flex-shrink: 0; /* No permite que el elemento se encoja más allá de su tamaño */
 }
+inicio-boton-notificacion
 .rectangle2-rectangle21 {
   top: 0px;
   left: 0px;
@@ -911,7 +912,18 @@ html {
   position: absolute;
   align-items: flex-start;
   flex-shrink: 0;
+  cursor: pointer;
+  background-color: #fdffff00;
+  color: #ffffff;
+  transition: transform 0.3s; /* Agrega una transición suave solo para la propiedad transform */
 }
+
+/* Estilo del botón de notificación al pasar el cursor sobre él */
+.inicio-boton-notificacion:hover {
+  color: #ffffff;
+  transform: scale(1.2); /* Realiza un zoom del 20% al pasar el cursor */
+}
+
 .inicio-btn-nofiticacion {
   top: 0px;
   left: 0px;
@@ -922,6 +934,7 @@ html {
   align-items: flex-start;
   flex-shrink: 1;
 }
+
 .inicio-boton-perfil {
   top: 34px;
   left: 1101px;
@@ -931,7 +944,13 @@ html {
   position: absolute;
   align-items: flex-start;
   flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.3s; /* Agrega una transición suave solo para la propiedad transform */
 }
+.inicio-boton-perfil:hover{
+  transform: scale(1.2); /* Realiza un zoom del 20% al pasar el cursor */
+}
+
 .inicio-btn-perfil {
   top: 0px;
   left: 0px;
@@ -951,7 +970,13 @@ html {
   position: absolute;
   align-items: flex-start;
   flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
+.inicio-boton-config:hover{
+  transform: scale(1.2);
+}
+
 .inicio-btn-perfil1 {
   top: 0px;
   left: 0px;
@@ -962,6 +987,8 @@ html {
   align-items: flex-start;
   flex-shrink: 1;
 }
+
+
 .inicio-pagina-dashboard {
   top: 31px;
   left: 346px;
