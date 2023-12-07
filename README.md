@@ -1,2 +1,2 @@
 # Proyect-Veterinaria
-Desarrollo de una aplicación de veterinaria donde consta de diversas secciones, desarrollado con los lenguajes de JavaScript y PHP, donde se utiliza tambien HTML,CSS
+El desarrollo de una aplicación veterinaria consta de diversas secciones y se ha realizado utilizando los lenguajes de JavaScript y PHP. Además, se emplean también HTML y CSS para garantizar un diseño y una interfaz de usuario efectivos.
