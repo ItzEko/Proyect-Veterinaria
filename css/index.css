@@ -933,6 +933,7 @@ inicio-boton-notificacion
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
+  cursor: pointer;
 }
 
 .inicio-boton-perfil {
@@ -945,11 +946,53 @@ inicio-boton-notificacion
   align-items: flex-start;
   flex-shrink: 0;
   cursor: pointer;
+  
   transition: transform 0.3s; /* Agrega una transición suave solo para la propiedad transform */
 }
 .inicio-boton-perfil:hover{
   transform: scale(1.2); /* Realiza un zoom del 20% al pasar el cursor */
 }
+
+.inicio-gestionar-clientes{
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.inicio-gestion-clientes-fondo {
+  top: 276px;
+  left: 62px;
+  width: 39px;
+  height: 32px;
+  position: absolute;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+.inicio-gestion-clientes-fondo:hover,.inicio-gestionar-clientes:hover{
+  transform: scale(1.1);
+}
+
+.inicio-dashboard-text {
+  top: 175px;
+  left: 135px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.inicio-dashboard-text:hover{
+  transform: scale(1.1);
+  color: blue; 
+}
+
 
 .inicio-btn-perfil {
   top: 0px;
@@ -1299,21 +1342,7 @@ inicio-boton-notificacion
   position: absolute;
   border-radius: 10px;
 }
-.inicio-text10 {
-  top: 175px;
-  left: 135px;
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  position: absolute;
-  font-size: 16px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
+
 .inicio-rectangle4 {
   top: 171px;
   left: 57px;
@@ -1322,14 +1351,7 @@ inicio-boton-notificacion
   position: absolute;
   border-radius: 5px;
 }
-.inicio-rectangle5 {
-  top: 276px;
-  left: 62px;
-  width: 39px;
-  height: 32px;
-  position: absolute;
-  border-radius: 5px;
-}
+
 .inicio-dashboard-icon {
   top: 172px;
   left: 66px;
